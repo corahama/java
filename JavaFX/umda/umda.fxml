@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="8.0" prefHeight="313.0" prefWidth="1145.0" vgap="4.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="umda.umdaController">
+  <columnConstraints>
+    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="294.0" minWidth="10.0" prefWidth="253.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="3.0" prefWidth="97.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="0.5" prefWidth="369.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="10.0" prefWidth="374.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Algoritmo UMDAc" textAlignment="CENTER" underline="true" GridPane.halignment="LEFT">
+         <effect>
+            <Blend />
+         </effect>
+      </Label>
+      <Label text="Cantidad de individuos" GridPane.rowIndex="1" />
+      <Label text="Cantidad de individuos para seleccion" GridPane.rowIndex="2" />
+      <Label text="Numero de iteraciones" GridPane.rowIndex="3" />
+      <Label text="Numero de dimensiones" GridPane.rowIndex="4" />
+      <TextField fx:id="individualsTextField" text="100" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="indvSelectionTextField" text="5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <TextField fx:id="iterationsTextField" text="100" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="dimentionsTextField" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#initializeButtonPressed" text="Iniciar" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+      <Label prefHeight="16.0" prefWidth="54.0" text="Campos" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+      <Label text="Grafica por dimensiones" GridPane.columnIndex="2" GridPane.halignment="CENTER" />
+      <LineChart fx:id="lineChart" prefHeight="600.0" prefWidth="386.0" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="5">
+        <xAxis>
+          <NumberAxis lowerBound="-1.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis lowerBound="-5.12" side="LEFT" upperBound="5.12" />
+        </yAxis>
+      </LineChart>
+      <Label text="Grafica por fitness" GridPane.columnIndex="3" GridPane.halignment="CENTER" />
+      <LineChart fx:id="lineChart2" GridPane.columnIndex="3" GridPane.rowIndex="1" GridPane.rowSpan="5">
+        <xAxis>
+          <NumberAxis lowerBound="-10.0" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis lowerBound="-5.0" side="LEFT" upperBound="5.0" />
+        </yAxis>
+      </LineChart>
+   </children>
+   <padding>
+      <Insets bottom="14.0" left="14.0" right="14.0" top="14.0" />
+   </padding>
+</GridPane>

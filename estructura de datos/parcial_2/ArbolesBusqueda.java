@@ -1,19 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package parcial_2;
 
 /**
  *
  * @author juan
  */
-public class ArbolesBusqueda {
- 
+public class ArbolesBusqueda { 
     public static void main(String[] args){
-    
-        
         NodoArbol numeros = new NodoArbol();
         numeros.dato = 43;
         
@@ -26,7 +18,6 @@ public class ArbolesBusqueda {
         insertar(numeros, 86);
         insertar(numeros, 15);
         insertar(numeros, 48);
-        
         
         //Arbol de busqueda lleno
         //NodoArbol eliminado = eliminarMayor(numeros);

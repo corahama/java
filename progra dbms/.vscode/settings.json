@@ -1,0 +1,8 @@
+{
+    "maven.view": "flat",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/corahama/Documents/java/postgresql-42.2.23.jar",
+        "/home/corahama/Documents/java/mysql-connector-java-8.0.17.jar"
+    ]
+}

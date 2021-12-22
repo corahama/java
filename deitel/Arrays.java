@@ -11,7 +11,7 @@ public class Arrays{
   //     System.out.printf("%8s %8s%n", counter, array[counter]);
   //   }
   //
-  //   System.out.print(array.length);
+  //   System.out.println(array.length);
   // }
 
   // ARRAY DE LOS NUMEROS PARES
@@ -97,6 +97,7 @@ public class Arrays{
       }
 
     }
+
     System.out.printf("%s %s%n", "Puntuacion", "Frecuencia");
     for(int counter = 1; counter < answer.length ; counter++)
       System.out.printf("%10d %10d%n", counter, answer[counter]);
